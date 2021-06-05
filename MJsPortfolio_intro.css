@@ -1,0 +1,78 @@
+:root {
+  /* Color */
+  --color-blue: #4a3aff;
+  --color-yellow: #ffb950;
+  --color-black: #343434;
+  --color-grey: #8d8d8d;
+  --color-white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./src/roadingViewSrc/Background_group.png");
+  background-color: var(--color-blue);
+  background-size: cover;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes logo-ani {
+  from {
+    stroke-dashoffset: 2666;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.logo-text {
+  z-index: 1;
+  position: absolute;
+  width: 95%;
+  stroke-dasharray: 2666;
+  animation: logo-ani 3.5s linear;
+}
+
+@keyframes logoDot-ani {
+  0% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.logo-text-dot {
+  z-index: 1;
+  position: absolute;
+  transform: translate(-6%, 22%);
+  width: 140%;
+  animation: logoDot-ani 2.3s linear;
+}
+
+.logo-circle {
+  width: 85%;
+  transform: rotate(4.62deg);
+}
