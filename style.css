@@ -17,7 +17,7 @@ body {
   width: 100%;
 }
 
-.roadingView {
+.roader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +73,6 @@ body {
 }
 
 .roadingView__logo-circle {
-  width: 85%;
+  width: 50%;
   transform: rotate(4.62deg);
 }
