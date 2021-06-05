@@ -11,10 +11,6 @@
   box-sizing: border-box;
   margin: 0;
 }
-git body {
-  height: 100%;
-  width: 100%;
-}
 
 .roader {
   display: flex;
@@ -27,14 +23,7 @@ git body {
   background-size: cover;
 }
 
-.roadingView__logo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes logo-ani {
+@keyframes logo-title_ani {
   from {
     stroke-dashoffset: 2666;
   }
@@ -43,19 +32,19 @@ git body {
   }
 }
 
-.roadingView__logo-text {
+.roader_logo-title {
   z-index: 1;
   position: absolute;
-  width: 95%;
+  width: 66%;
   stroke-dasharray: 2666;
-  animation: logo-ani 3.5s linear;
+  animation: logo-title_ani 3.5s linear;
 }
 
-@keyframes logoDot-ani {
+@keyframes logo-dot_ani {
   0% {
     opacity: 0;
   }
-  96% {
+  97% {
     opacity: 0;
   }
   100% {
@@ -63,15 +52,15 @@ git body {
   }
 }
 
-.roadingView__logo-textDot {
+.roader_logo-dot {
   z-index: 1;
   position: absolute;
-  transform: translate(-6%, 22%);
-  width: 140%;
-  animation: logoDot-ani 2.3s linear;
+  transform: translate(-12%, 20%);
+  width: 120%;
+  animation: logo-dot_ani 2.3s linear;
 }
 
-.roadingView__logo-circle {
-  width: 50%;
+.roader_logo-circle {
+  width: 55%;
   transform: rotate(4.62deg);
 }
