@@ -25,7 +25,7 @@ body {
   height: 100vh;
   background-image: url("./src/roadingViewSrc/Background_group.png");
   background-color: var(--color-blue);
-  background-size: contain;
+  background-size: cover;
 }
 
 .roadingView__logo {
@@ -35,68 +35,44 @@ body {
   align-items: center;
 }
 
+@keyframes logo-ani {
+  from {
+    stroke-dashoffset: 2666;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 .roadingView__logo-text {
   z-index: 1;
   position: absolute;
+  width: 95%;
+  stroke-dasharray: 2666;
+  animation: logo-ani 3.5s linear;
 }
 
-.cls-1 {
-  fill: url(#무제_그라디언트_12);
+@keyframes logoDot-ani {
+  0% {
+    opacity: 0;
+  }
+  96% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
-.cls-2 {
-  fill: url(#무제_그라디언트_12-2);
-}
-
-.cls-3,
-.cls-4,
-.cls-5,
-.cls-6,
-.cls-7 {
-  fill: none;
-  stroke-linecap: round;
-}
-
-.cls-3 {
-  stroke-miterlimit: 10;
-  stroke-width: 30px;
-  stroke: url(#무제_그라디언트_12-3);
-}
-
-.cls-4,
-.cls-5,
-.cls-6,
-.cls-7 {
-  stroke-linejoin: round;
-}
-
-.cls-4,
-.cls-5 {
-  stroke-width: 37px;
-}
-
-.cls-4 {
-  stroke: url(#무제_그라디언트_12-4);
-}
-
-.cls-5 {
-  stroke: url(#무제_그라디언트_12-5);
-}
-
-.cls-6,
-.cls-7 {
-  stroke-width: 21px;
-}
-
-.cls-6 {
-  stroke: url(#무제_그라디언트_12-6);
-}
-
-.cls-7 {
-  stroke: url(#무제_그라디언트_12-7);
+.roadingView__logo-textDot {
+  z-index: 1;
+  position: absolute;
+  transform: translate(-6%, 22%);
+  width: 140%;
+  animation: logoDot-ani 2.3s linear;
 }
 
 .roadingView__logo-circle {
-  width: 80%;
-  transform: rotate(10deg);
+  width: 85%;
+  transform: rotate(4.62deg);
 }

@@ -1,0 +1,1 @@
+console.log(document.querySelector('.logo-text-stroke').getTotalLength)
