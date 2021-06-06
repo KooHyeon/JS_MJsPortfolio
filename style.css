@@ -22,7 +22,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("./src/roadingViewSrc/Background_group.png");
+  background-image: url("./src/roadingViewSrc/background_ver2.png");
   background-color: var(--color-blue);
   background-size: cover;
 }
@@ -74,5 +74,11 @@ body {
 }
 
 .logo-circle-text {
-  font-family: Miracle;
+  font-size: 60px;
+}
+
+@media (max-width: 800px) {
+  .logo-circle-text {
+    font-size: 30px;
+  }
 }
