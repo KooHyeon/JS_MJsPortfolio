@@ -5,11 +5,23 @@
   --color-black: #343434;
   --color-grey: #8d8d8d;
   --color-white: #fff;
+  /* font */
+  --font-serif: "DM Serif Display", serif;
+  --font-sanserif: "Poppins", sans-serif;
+  --font-size-regular: 24px;
+  --font-size-small: 16px;
+  --font-size-xsmall: 12px;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 .hiddne {
@@ -104,6 +116,7 @@
 }
 
 .index_navbar {
+  z-index: 99;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,40 +150,70 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
-.index_projects_cotainer {
-  position: relative;
+.index_projects_container {
+  overflow: hidden;
+  margin: 1rem 2rem;
 }
 
 .index_projects_container:hover .projects_img_hover {
   opacity: 0.5;
 }
 
-.index_projects img {
-  width: 25rem;
-}
-
 .index_projects_img {
+  width: 22.5rem;
+  height: 27.5rem;
+  z-index: 1;
   display: block;
   position: absolute;
-  z-index: 1;
+  overflow: hidden;
 }
 
 .projects_img_hover {
-  position: relative;
   z-index: 3;
+  width: 22.5rem;
+  height: 27.5rem;
+  position: relative;
   display: block;
   opacity: 0;
+}
+
+.index_toTopBtn {
+  position: relative;
+  left: calc(50vw - 3.25rem);
+  width: 6.5rem;
+  height: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+
+.index_toTopBtn img {
+  width: 6.5rem;
+  height: 3.5rem;
 }
 
 .index_footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 2rem 4.6rem;
+  font-size: var(--font-size-regular);
+  font-family: var(--font-sanserif);
+  color: var(--color-blue);
 }
 
-.index_footer img {
+.index_footer_copyright img {
+  position: relative;
+  top: 3px;
+  left: -3px;
+  width: 23px;
+}
+
+.index_footer_smile {
+  position: absolute;
+  left: calc(50vw - 11.5px);
   width: 23px;
 }
