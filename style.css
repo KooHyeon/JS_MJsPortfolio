@@ -1,4 +1,5 @@
 :root {
+  scroll-behavior: smooth;
   /* Color */
   --color-blue: #4a3aff;
   --color-yellow: #ffb950;
@@ -262,7 +263,7 @@ a {
 .projects_description_mainTitle-m {
   color: var(--color-blue);
   font-size: 18px;
-  line-height: 2;
+  line-height: 1.4;
 }
 
 .projects_description_mainTitle-s {
@@ -294,6 +295,15 @@ a {
   height: 2rem;
 }
 
+.index_downArrow {
+  z-index: 98;
+  position: absolute;
+  top: 82vh;
+  left: calc(50vw - 3.25rem);
+  width: 6.5rem;
+  height: 3.5rem;
+}
+
 .index_toTopBtn {
   z-index: 98;
   position: absolute;
@@ -301,7 +311,6 @@ a {
   left: calc(50vw - 3.25rem);
   width: 6.5rem;
   height: 3.5rem;
-  margin-bottom: rem;
 }
 
 .index_toTopBtn img {

@@ -41,4 +41,22 @@ function textRotate() {
 textRotate();
 
 // -------- index --------
+const navbar = document.querySelector(".index_navbar")
+const toTopBtn = document.querySelector(".index_toTopBtn")
+const downArrow = document.querySelector(".index_downArrow");
 
+window.addEventListener("scroll", arrowDisappear);
+
+toTopBtn.addEventListener("click", toTheTop);
+
+function arrowDisappear() {
+    if (window.scrollY > 200) {
+        downArrow.style.opacity = 1 - window.scrollY/400;
+    } else if (window.scrollY < 10) {
+        downArrow.style.opacity = 1;
+    }
+}
+
+function toTheTop() {
+    window.scrollTo(0, 0);
+}
