@@ -31,6 +31,11 @@ button {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .hiddne {
   display: none;
 }
@@ -115,7 +120,7 @@ button {
 
 .index {
   width: 100vw;
-  height: 270vh;
+  height: 250vh;
   background-position-y: 46px;
   background: url(./src/indexViewSrc/background_index.png) center/cover
     no-repeat;
@@ -163,11 +168,11 @@ button {
 }
 
 .index_projects_container {
-  width: 22.5rem;
-  height: 27.5rem;
+  width: 25vw;
+  height: 56vh;
   position: relative;
   overflow: hidden;
-  margin: 1rem 2rem;
+  margin: 0 2rem;
 }
 
 .index_projects_container:hover .projects_img_hover {
@@ -179,18 +184,56 @@ button {
 }
 
 .index_projects_img {
-  width: 22.5rem;
-  height: 27.5rem;
+  width: 100%;
+  height: 100%;
   z-index: 1;
   display: block;
   position: absolute;
   overflow: hidden;
+  border-right: solid 1px var(--color-blue);
+  border-bottom: solid 1px var(--color-blue);
+}
+
+.pj1 {
+  background-image: url("./src/indexViewSrc/projects/new_500.png");
+}
+
+.pj2 {
+  background-image: url("./src/indexViewSrc/projects/cat_500.png");
+}
+
+.pj3 {
+  background-image: url("./src/indexViewSrc/projects/SMILE_500.png");
+}
+
+.pj4 {
+  background-image: url("./src/indexViewSrc/projects/our_500.png");
+}
+
+.pj5 {
+  background-image: url("./src/indexViewSrc/projects/Thegifted_500.png");
+}
+
+.pj6 {
+  background-image: url("./src/indexViewSrc/projects/EVOLO_500.png");
+}
+
+.pj7 {
+  background-image: url("./src/indexViewSrc/projects/DDP_500.png");
+}
+
+.pj8 {
+  background-image: url("./src/indexViewSrc/projects/nomas_500.png");
+}
+
+.pj9 {
+  background-image: url("./src/indexViewSrc/projects/KODAK_500.png");
 }
 
 .projects_img_hover {
   z-index: 3;
-  width: 22.5rem;
-  height: 27.5rem;
+  width: 25vw;
+  height: 56vh;
   position: relative;
   display: block;
   opacity: 0;
@@ -223,6 +266,7 @@ button {
 }
 
 .projects_description_mainTitle-s {
+  width: 12rem;
   color: var(--color-blue);
   font-size: var(--font-size-regular);
   line-height: 1.3;
@@ -251,12 +295,13 @@ button {
 }
 
 .index_toTopBtn {
-  position: relative;
+  z-index: 98;
+  position: absolute;
+  top: 220%;
   left: calc(50vw - 3.25rem);
   width: 6.5rem;
   height: 3.5rem;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-bottom: rem;
 }
 
 .index_toTopBtn img {
@@ -268,7 +313,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2rem 4.6rem;
+  margin: 4rem 6%;
   font-size: var(--font-size-medium);
   font-family: var(--font-sanserif);
   color: var(--color-blue);
