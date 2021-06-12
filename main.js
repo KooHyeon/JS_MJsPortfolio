@@ -1,21 +1,21 @@
 // -------- Roader --------
-window.addEventListener("load",
+window.addEventListener('load',
     function () {
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden";
+        const loader = document.querySelector('.loader');
+        loader.className += 'hidden';
     })
 
 // Logo Elipse Size
 function Init() {
     let w = window.innerWidth;
     let h = window.innerHeight * 0.8;
-    ellipse.setAttributeNS(null, "viewBox", `0 0 ${w/0.65}  ${h/0.65}`);
+    ellipse.setAttributeNS(null, 'viewBox', `0 0 ${w/0.65}  ${h/0.65}`);
     let d = `M${9 * w / 10},${h / 2}
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${w / 10} ${5 * h / 10}
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${9 * w / 10} ${5 * h / 10} 
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${w / 10} ${5 * h / 10} 
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${9 * w / 10} ${5 * h / 10} `;
-    thePath.setAttributeNS(null, "d", d);
+    thePath.setAttributeNS(null, 'd', d);
 
     // Font size
     let paths_length = thePath.getTotalLength();
@@ -23,7 +23,7 @@ function Init() {
 }
 window.setTimeout(function () {
     Init();
-    window.addEventListener("resize", Init, false);
+    window.addEventListener('resize', Init, false);
 }, 15);
         
 
@@ -31,7 +31,7 @@ window.setTimeout(function () {
 let startText = 0;
 function textRotate() {
     requestAnimationFrame(textRotate);
-    text.setAttributeNS(null, "startOffset", startText + "%");
+    text.setAttributeNS(null, 'startOffset', startText + '%');
     if (startText >= 50) {
         startText = 0;
     }
@@ -41,22 +41,39 @@ function textRotate() {
 textRotate();
 
 // -------- index --------
-const navbar = document.querySelector(".index_navbar")
-const toTopBtn = document.querySelector(".index_toTopBtn")
-const downArrow = document.querySelector(".index_downArrow");
 
-window.addEventListener("scroll", arrowDisappear);
+// Top & Down button function
+const toTopBtn = document.querySelector('.index_toTopBtn')
+const downArrow = document.querySelector('.index_downArrow');
 
-toTopBtn.addEventListener("click", toTheTop);
+window.addEventListener('scroll', arrowDisappear);
+
+toTopBtn.addEventListener('click', toTheTop);
 
 function arrowDisappear() {
     if (window.scrollY > 200) {
-        downArrow.style.opacity = 1 - window.scrollY/400;
+        downArrow.style.opacity = 1 - window.scrollY / 400;
     } else if (window.scrollY < 10) {
         downArrow.style.opacity = 1;
     }
+
 }
 
 function toTheTop() {
     window.scrollTo(0, 0);
 }
+
+// Navbar toggle button
+const navbarOpenBtn = document.querySelector('.navbar_toggle-btn')
+const navbarCloseBtn = document.querySelector('.navbar_toggle-btn.off')
+const navbarToggleOn = document.querySelector('.navbar_toggle-on')
+const navbarToggleOff = document.querySelector('.navbar_toggle-off')
+navbarOpenBtn.addEventListener('click', () => {
+    navbarToggleOn.classList.toggle('hidden');
+    navbarToggleOff.classList.toggle('hidden');
+    downArrow.style.opacity = 0;
+})
+navbarCloseBtn.addEventListener('click', () => {
+    navbarToggleOn.classList.toggle('hidden');
+    navbarToggleOff.classList.toggle('hidden');
+})
