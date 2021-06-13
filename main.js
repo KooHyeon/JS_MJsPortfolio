@@ -1,9 +1,9 @@
-// -------- Roader --------
-window.addEventListener('load',
-    function () {
-        const loader = document.querySelector('.loader');
-        loader.className += 'hidden';
-    })
+// -------- loader --------
+// window.addEventListener('load',
+//     function () {
+//         const loader = document.querySelector('.loader');
+//         loader.className += 'hidden';
+//     })
 
 // Logo Elipse Size
 function Init() {
@@ -13,13 +13,13 @@ function Init() {
     let d = `M${9 * w / 10},${h / 2}
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${w / 10} ${5 * h / 10}
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${9 * w / 10} ${5 * h / 10} 
-  A${4 * w / 10},${4 * h / 10} 0 0 1 ${w / 10} ${5 * h / 10} 
+  A${4 * w / 10},${4 * h / 10} 0 0ß 1 ${w / 10} ${5 * h / 10} 
   A${4 * w / 10},${4 * h / 10} 0 0 1 ${9 * w / 10} ${5 * h / 10} `;
     thePath.setAttributeNS(null, 'd', d);
 
     // Font size
     let paths_length = thePath.getTotalLength();
-    text.style.fontSize = paths_length / 94;
+    text.style.fontSize = paths_length / 50;
 }
 window.setTimeout(function () {
     Init();
@@ -29,6 +29,8 @@ window.setTimeout(function () {
 
 // Logo Text Rotate
 let startText = 0;
+let timer = null;
+
 function textRotate() {
     requestAnimationFrame(textRotate);
     text.setAttributeNS(null, 'startOffset', startText + '%');
@@ -36,9 +38,22 @@ function textRotate() {
         startText = 0;
     }
     startText += 0.02;
+    console.log('stop');
 }
 
-textRotate();
+textRotate()
+
+const loader = document.querySelector('.loader');
+
+window.addEventListener('load', () => {
+    setTimeout(fadeOut, 3000)
+});
+
+function fadeOut() {
+    loader.style.transition = '0.8s';
+    loader.style.opacity = 0;
+    loader.style.display = 'none';
+}
 
 // -------- index --------
 

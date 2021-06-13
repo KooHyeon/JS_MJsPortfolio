@@ -17,8 +17,8 @@
 <body>
 
   <!-- Roader -->
-  <div class="roader hidden">
-    <svg class="roader_logo-title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  <div class="loader">
+    <svg class="loader_logo-title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
       id="mj_logo" viewBox="0 0 673.93 175.47">
       <defs>
         <mask id="logo-title_mask">
@@ -77,7 +77,7 @@
         points="17.5 157.97 188.12 31.89 144.95 155.11 309.4 31.89 262.12 157.97 460.83 17.5 460.83 157.97 460.83 17.5 627.34 157.97 627.34 17.5" />
       </g>
     </svg>
-    <svg class="roader_logo-dot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg class="loader_logo-dot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1" id="레이어_1" x="0px" y="0px" viewBox="0 0 36 46" style="enable-background:new 0 0 36 46;"
       xml:space="preserve">
       <style type="text/css">
@@ -93,12 +93,12 @@
       <path class="st0"
         d="M6.96,21.97c0-2.89,0.96-5.3,2.88-7.21c1.95-1.95,4.37-2.93,7.23-2.93c2.97,0,5.43,0.98,7.38,2.93  c1.92,1.92,2.88,4.32,2.88,7.21c0,2.93-0.96,5.35-2.88,7.26c-2.06,1.98-4.52,2.98-7.38,2.98c-2.76,0-5.18-0.99-7.23-2.98  C7.92,27.32,6.96,24.9,6.96,21.97z" />
     </svg>
-    <div id="wrap" class="roader_logo-circle">
+    <div id="wrap" class="loader_logo-circle">
       <svg id="ellipse" version="1.1">
         <path id="thePath" fill="transparent" />
         <text class="logo-circle-text" fill="#ffb950">
           <textPath xlink:href="#thePath" dy="5" id="text" lengthAdjust="spacingAndGlyphs">min jeong kim - min jeong kim
-            - min jeong kim - min jeong kim
+            - min jeong kim
             - min jeong kim - min jeong kim - min jeong kim -
           </textPath>
         </text>
@@ -107,27 +107,40 @@
   </div>
   <!-- Navbar -->
   <nav class="navbar_toggle-off">
-    <button class="navbar_toggle-btn" type="button"><img src="./src/indexViewSrc/menu_blue.png" alt="menu button"></button>
+    <button class="navbar_toggle-btn" type="button"><img src="./src/indexViewSrc/menu_blue.png"
+        alt="menu button"></button>
     <a class="navbar_logo" href="#"><img src="./src/indexViewSrc/mjlogo_blue.png" alt="logo image of minjeong kim"></a>
   </nav>
   <nav class="navbar_toggle-on hidden">
     <div class="navbar_top">
-      <button class="navbar_toggle-btn off" type="button"><img src="./src/indexViewSrc/menu_close.png" alt=" close menu"></button>
-      <a class="navbar_logo" href="#"><img src="./src/indexViewSrc/mjlogo_yellow.png" alt="logo image of minjeong kim"></a>
+      <button class="navbar_toggle-btn off" type="button"><img src="./src/indexViewSrc/menu_close.png"
+          alt=" close menu"></button>
+      <a class="navbar_logo" href="#"><img src="./src/indexViewSrc/mjlogo_yellow.png"
+          alt="logo image of minjeong kim"></a>
     </div>
     <ul class="navbar_menu">
       <li class="navbar_menu_project">
         <a class="navbar_menu_title">Project<a />
           <ul class="navbar_menu_project-list">
-            <li><a>Residential</a></li>
+            <li class="navbar_menu_project-category">
+              <a>Residential</a>
+            </li>
             <div class="divider"></div>
-            <li><a>Exhibition</a></li>
+            <li class="navbar_menu_project-category"><a>Exhibition</a></li>
             <div class="divider"></div>
-            <li><a>Furniture</a></li>
+            <li class="navbar_menu_project-category"><a>Furniture</a></li>
             <div class="divider"></div>
-            <li><a>Etc.</a></li>
+            <li class="navbar_menu_project-category"><a>Etc.</a></li>
           </ul>
       </li>
+      <div class="navbar_menu_project-imgs hidden">
+        <ul class="project-imgs_residential">
+          <li><a href=""><img src="" alt=""></a></li>
+          <li><a href=""><img src="" alt=""></a></li>
+          <li><a href=""><img src="" alt=""></a></li>
+          <li><a href=""><img src="" alt=""></a></li>
+        </ul>
+      </div>
       <li class="navbar_menu_about"><a class="navbar_menu_title">About</a></li>
       <li class="navbar_menu_contact">
         <span class="navbar_menu_title">Contact</span>
@@ -135,6 +148,7 @@
           <a href="mailto:mj_kim_531@naver.com">mj_kim_531@naver.com</a>
           <a href="mailto:mjeongkim531@gmail.com">mjeongkim531@gmail.com</a>
         </address>
+        <div class="divider"></div>
         <address>
           <a href="">Instagram</a>
           <a href="">Behance</a>
