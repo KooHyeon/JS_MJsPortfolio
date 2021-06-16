@@ -55,11 +55,30 @@ function fadeOut() {
     loader.style.display = 'none';
 }
 
+// -------- navbar --------
+
+
+// Navbar toggle button
+const navbarOpenBtn = document.querySelector('.nav__toggle-btn')
+const navbarCloseBtn = document.querySelector('.nav__toggle-btn--off')
+const navbarToggleOn = document.querySelector('.nav--on')
+const navbarToggleOff = document.querySelector('.nav--off')
+navbarOpenBtn.addEventListener('click', () => {
+    navbarToggleOn.classList.toggle('hidden');
+    navbarToggleOff.classList.toggle('hidden');
+    downArrow.style.opacity = 0;
+})
+navbarCloseBtn.addEventListener('click', () => {
+    navbarToggleOn.classList.toggle('hidden');
+    navbarToggleOff.classList.toggle('hidden');
+})
+
+
 // -------- index --------
 
 // Top & Down button function
-const toTopBtn = document.querySelector('.index_toTopBtn')
-const downArrow = document.querySelector('.index_downArrow');
+const toTopBtn = document.querySelector('.top-btn')
+const downArrow = document.querySelector('.down-arrow');
 
 window.addEventListener('scroll', arrowDisappear);
 
@@ -77,18 +96,3 @@ function arrowDisappear() {
 function toTheTop() {
     window.scrollTo(0, 0);
 }
-
-// Navbar toggle button
-const navbarOpenBtn = document.querySelector('.navbar_toggle-btn')
-const navbarCloseBtn = document.querySelector('.navbar_toggle-btn.off')
-const navbarToggleOn = document.querySelector('.navbar_toggle-on')
-const navbarToggleOff = document.querySelector('.navbar_toggle-off')
-navbarOpenBtn.addEventListener('click', () => {
-    navbarToggleOn.classList.toggle('hidden');
-    navbarToggleOff.classList.toggle('hidden');
-    downArrow.style.opacity = 0;
-})
-navbarCloseBtn.addEventListener('click', () => {
-    navbarToggleOn.classList.toggle('hidden');
-    navbarToggleOff.classList.toggle('hidden');
-})

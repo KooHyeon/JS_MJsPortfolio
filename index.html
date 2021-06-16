@@ -18,10 +18,10 @@
 
   <!-- Roader -->
   <div class="loader">
-    <svg class="loader_logo-title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg class="loader__title" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
       id="mj_logo" viewBox="0 0 673.93 175.47">
       <defs>
-        <mask id="logo-title_mask">
+        <mask id="title-mask">
           <svg xmlns="http://www.w3.org/2000/svg" id="레이어_1" data-name="레이어 1" viewBox="0 0 670.06 169.24">
             <defs>
               <style>
@@ -66,7 +66,7 @@
             stroke: url(#무제_그라디언트_12);
           }
         </style>
-        <g mask="url(#logo-title_mask)">
+        <g mask="url(#title-mask)">
           <linearGradient id="무제_그라디언트_12" x1="322.42" y1="175.47" x2="322.42" gradientUnits="userSpaceOnUse">
             <stop offset="0" stop-color="#f9c156" />
             <stop offset="1" stop-color="#f0896a" />
@@ -77,7 +77,7 @@
         points="17.5 157.97 188.12 31.89 144.95 155.11 309.4 31.89 262.12 157.97 460.83 17.5 460.83 157.97 460.83 17.5 627.34 157.97 627.34 17.5" />
       </g>
     </svg>
-    <svg class="loader_logo-dot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    <svg class="loader__dot" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
       version="1.1" id="레이어_1" x="0px" y="0px" viewBox="0 0 36 46" style="enable-background:new 0 0 36 46;"
       xml:space="preserve">
       <style type="text/css">
@@ -93,10 +93,10 @@
       <path class="st0"
         d="M6.96,21.97c0-2.89,0.96-5.3,2.88-7.21c1.95-1.95,4.37-2.93,7.23-2.93c2.97,0,5.43,0.98,7.38,2.93  c1.92,1.92,2.88,4.32,2.88,7.21c0,2.93-0.96,5.35-2.88,7.26c-2.06,1.98-4.52,2.98-7.38,2.98c-2.76,0-5.18-0.99-7.23-2.98  C7.92,27.32,6.96,24.9,6.96,21.97z" />
     </svg>
-    <div id="wrap" class="loader_logo-circle">
+    <div id="wrap" class="loader__circle">
       <svg id="ellipse" version="1.1">
         <path id="thePath" fill="transparent" />
-        <text class="logo-circle-text" fill="#ffb950">
+        <text class="circle__text" fill="#ffb950">
           <textPath xlink:href="#thePath" dy="5" id="text" lengthAdjust="spacingAndGlyphs">min jeong kim - min jeong kim
             - min jeong kim
             - min jeong kim - min jeong kim - min jeong kim -
@@ -106,212 +106,221 @@
     </div>
   </div>
   <!-- Navbar -->
-  <nav class="navbar_toggle-off">
-    <button class="navbar_toggle-btn" type="button"><img src="./src/indexViewSrc/menu_blue.png"
-        alt="menu button"></button>
-    <a class="navbar_logo" href="#"><img src="./src/indexViewSrc/mjlogo_blue.png" alt="logo image of minjeong kim"></a>
+  <nav class="nav--off">
+    <button class="nav__toggle-btn" type="button"><img src="./src/indexViewSrc/menu_blue.png"
+        alt="menu toggle button"></button>
+    <a class="logo--blue" href="#"><img src="./src/indexViewSrc/mjlogo_blue.png" alt="logo image of minjeong kim"></a>
   </nav>
-  <nav class="navbar_toggle-on hidden">
-    <div class="navbar_top">
-      <button class="navbar_toggle-btn off" type="button"><img src="./src/indexViewSrc/menu_close.png"
-          alt=" close menu"></button>
-      <a class="navbar_logo" href="#"><img src="./src/indexViewSrc/mjlogo_yellow.png"
+  <nav class="nav--on hidden">
+    <div class="nav--blue">
+      <button class="nav__toggle-btn--off" type="button"><img src="./src/indexViewSrc/menu_close.png"
+          alt=" close menu button"></button>
+      <a class="logo--yellow" href="#"><img src="./src/indexViewSrc/mjlogo_yellow.png"
           alt="logo image of minjeong kim"></a>
     </div>
-    <ul class="navbar_menu">
-      <li class="navbar_menu_project">
-        <a class="navbar_menu_title">Project<a />
-          <ul class="navbar_menu_project-list">
-            <li class="navbar_menu_project-category">
-              <a>Residential</a>
-            </li>
-            <div class="divider"></div>
-            <li class="navbar_menu_project-category"><a>Exhibition</a></li>
-            <div class="divider"></div>
-            <li class="navbar_menu_project-category"><a>Furniture</a></li>
-            <div class="divider"></div>
-            <li class="navbar_menu_project-category"><a>Etc.</a></li>
-          </ul>
+    <ul class="menu">
+      <li class="menu__item">
+        <a class="menu__title">Project</a>
+        <ul class="projects-categories">
+          <li class="projects-category">
+            <a>Residential</a>
+          </li>
+          <div class="divider"></div>
+          <li class="projects-category"><a>Exhibition</a></li>
+          <div class="divider"></div>
+          <li class="projects-category"><a>Furniture</a></li>
+          <div class="divider"></div>
+          <li class="projects-category"><a>Etc.</a></li>
+        </ul>
       </li>
-      <div class="navbar_menu_project-imgs hidden">
-        <ul class="project-imgs_residential">
+      <div class="project__previews hidden">
+        <ul class="preview">
           <li><a href=""><img src="" alt=""></a></li>
           <li><a href=""><img src="" alt=""></a></li>
           <li><a href=""><img src="" alt=""></a></li>
           <li><a href=""><img src="" alt=""></a></li>
         </ul>
+        <ul class="preview">
+          <li><a href=""><img src="" alt=""></a></li>
+          <li><a href=""><img src="" alt=""></a></li>
+          <li><a href=""><img src="" alt=""></a></li>
+        </ul>
+        <ul class="preview">
+          <li><a href=""><img src="" alt=""></a></li>
+          <li><a href=""><img src="" alt=""></a></li>
+        </ul>
       </div>
-      <li class="navbar_menu_about"><a class="navbar_menu_title">About</a></li>
-      <li class="navbar_menu_contact">
-        <span class="navbar_menu_title">Contact</span>
-        <address>
+      <li class="menu__item"><a class="menu__title">About</a></li>
+      <li class="menu__item">
+        <span class="menu__title">Contact</span>
+        <address class="email">
           <a href="mailto:mj_kim_531@naver.com">mj_kim_531@naver.com</a>
           <a href="mailto:mjeongkim531@gmail.com">mjeongkim531@gmail.com</a>
         </address>
         <div class="divider"></div>
-        <address>
+        <address class="sns">
           <a href="">Instagram</a>
           <a href="">Behance</a>
         </address>
       </li>
     </ul>
   </nav>
-  <div class="index">
-    <section class="index_projects">
-      <div class="index_projects_container">
-        <div class="index_projects_img pj1"></div>
-        <img src="./src/indexViewSrc/projects/new_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle">
+  <div class="home">
+    <section class="projects">
+      <div class="project-container">
+        <div class="project__img pj1"></div>
+        <img src="./src/indexViewSrc/projects/new_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title">
               New House
             </h2>
-            <span class="projects_description_subtitle">Garden inside the house</span>
+            <span class="project__subtitle">Garden inside the house</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Reisidential / 2021</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj2"></div>
-        <img src="./src/indexViewSrc/projects/cat_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle">
+      <div class="project-container">
+        <div class="project__img pj2"></div>
+        <img src="./src/indexViewSrc/projects/cat_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title">
               애옹이네
             </h2>
-            <span class="projects_description_subtitle">The cat house</span>
+            <span class="project__subtitle">The cat house</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Reisidential / 2018</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj3"></div>
-        <img src="./src/indexViewSrc/projects/smile_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle">
+      <div class="project-container">
+        <div class="project__img pj3"></div>
+        <img src="./src/indexViewSrc/projects/smile_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title">
               Let's smile!
             </h2>
-            <span class="projects_description_subtitle">Urban furniture project</span>
+            <span class="project__subtitle">Urban furniture project</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Furniture / 2020</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj4"></div>
-        <img src="./src/indexViewSrc/projects/our_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle">
+      <div class="project-container">
+        <div class="project__img  pj4"></div>
+        <img src="./src/indexViewSrc/projects/our_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title">
               우리의 집
             </h2>
-            <span class="projects_description_subtitle">Let's share the line</span>
+            <span class="project__subtitle">Let's share the line</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Reisidential / 2019</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj5"></div>
-        <img src="./src/indexViewSrc/projects/thegifted_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle">
+      <div class="project-container">
+        <div class="project__img pj5"></div>
+        <img src="./src/indexViewSrc/projects/thegifted_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title">
               The gifted
             </h2>
-            <span class="projects_description_subtitle">2018 홍익대 산업디자인학과 졸업전시회</span>
+            <span class="project__subtitle">2018 홍익대 산업디자인학과 졸업전시회</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Exhibition / 2018</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj6"></div>
-        <img src="./src/indexViewSrc/projects/evolo_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle-s">
+      <div class="project-container">
+        <div class="project__img pj6"></div>
+        <img src="./src/indexViewSrc/projects/evolo_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title--s">
               Reconstruction of Hong Kong residence
             </h2>
-            <span class="projects_description_subtitle">with Self-driving unit</span>
+            <span class="project__subtitle">with Self-driving unit</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Reisidential / 2018</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj7"></div>
-        <img src="./src/indexViewSrc/projects/ddp_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle-s">
+      <div class="project-container">
+        <div class="project__img pj7"></div>
+        <img src="./src/indexViewSrc/projects/ddp_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title--s">
               Renovation projectof ddp 유구광장
             </h2>
-            <span class="projects_description_subtitle">한국의 마당을 담은 유구광장</span>
+            <span class="project__subtitle">한국의 마당을 담은 유구광장</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Exhibition / 2016</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj8"></div>
-        <img src="./src/indexViewSrc/projects/nomas_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle">
+      <div class="project-container">
+        <div class="project__img pj8"></div>
+        <img src="./src/indexViewSrc/projects/nomas_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title">
               Nomas
             </h2>
-            <span class="projects_description_subtitle">New furniture for City Nomad</span>
+            <span class="project__subtitle">New furniture for City Nomad</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Furniture / 2021</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
-      <div class="index_projects_container">
-        <div class="index_projects_img pj9"></div>
-        <img src="./src/indexViewSrc/projects/kodak_color.png" alt="" class="projects_img_hover">
-        <div class="index_projects_description">
-          <div class="projects_description_title">
-            <h2 class="projects_description_mainTitle-m">
+      <div class="project-container">
+        <div class="project__img pj9"></div>
+        <img src="./src/indexViewSrc/projects/kodak_color.png" alt="" class="project__hover-img">
+        <div class="project__text-container">
+          <div class="project__titles">
+            <h2 class="project__title--m">
               Rebranding of kodak
             </h2>
-            <span class="projects_description_subtitle">kodak cinema</span>
+            <span class="project__subtitle">kodak cinema</span>
           </div>
-          <div class="projects_description_etc">
+          <div class="project__description">
             <span>Exhibition / 2017</span>
-            <a href="#" class="projects_description_moreBtn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
+            <a href="#" class="project__more-btn"><img src="./src/indexViewSrc/more_blue.png" alt=""></a>
           </div>
         </div>
       </div>
     </section>
-    <img src="./src/indexViewSrc/down_white.png" alt="" class="index_downArrow">
-    <button class="index_toTopBtn" type="button"><img src="./src/indexViewSrc/up_blue.png" alt=""></button>
+    <img src="./src/indexViewSrc/down_white.png" alt="" class="down-arrow">
+    <button class="top-btn" type="button"><img src="./src/indexViewSrc/up_blue.png" alt=""></button>
 
-    <footer class="index_footer">
-      <span class="index_footer_copyright">
+    <footer class="footer">
+      <span class="copyright">
         MjKim2021
-        <img src="./src/indexViewSrc/copyright_b 1.png" alt="copyright">
+        <img src="./src/indexViewSrc/copyright_b 1.png" alt="copyright minjeong kims">
       </span>
-      <img class="index_footer_smile" src="./src/indexViewSrc/smiley_B 1.png" alt="smile emoji">
+      <img class="smile-emoji" src="./src/indexViewSrc/smiley_B 1.png" alt="smile emoji">
       <a href="#">Contact</a>
     </footer>
   </div>
