@@ -154,9 +154,13 @@ h2 {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 73%;
+  height: 80%;
   background: url("./src/indexViewSrc/menu/menu_background.png") center/cover
     no-repeat;
+}
+
+.nav--on.is-hover {
+  height: 100%;
 }
 
 .nav--blue {
@@ -183,7 +187,7 @@ h2 {
 .menu {
   position: fixed;
   top: 0;
-  margin-top: 0.5em;
+  margin-top: 0.3em;
   width: 92%;
   font-size: var(--font-size-xlarge);
   color: var(--color-yellow);
@@ -218,7 +222,7 @@ h2 {
   align-items: center;
 }
 
-.projects-categories:first-child:before {
+.projects-categories::before {
   content: "";
   display: inline-block;
   width: 0.5em;
@@ -235,15 +239,17 @@ h2 {
 
 .projects-category {
   display: flex;
+  flex-direction: column;
   align-items: center;
   font-size: var(--font-size-medium);
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 0 2em;
+  margin: 0 1em;
+  padding: 0.5em 1em;
 }
 
-.projects-category > a:hover {
+.projects-category:hover {
   color: var(--color-white);
   border-radius: 50%;
   background: radial-gradient(
@@ -253,6 +259,42 @@ h2 {
     rgba(255, 185, 80, 0.5) 50%,
     transparent
   );
+}
+
+.projects-preview::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  left: 0px;
+  bottom: 100%;
+  height: 100px;
+}
+
+.projects-preview {
+  display: none;
+  top: 28%;
+  left: 30.5%;
+  align-items: center;
+  position: absolute;
+}
+
+.projects-category:hover ~ .projects-preview {
+  display: flex;
+}
+
+.projects-preview:hover {
+  display: flex;
+}
+
+.projects-preview img {
+  width: 2.8em;
+  margin-right: 0.7em;
+  border: 1px solid var(--color-yellow);
+}
+
+.menu .menu__item:nth-child(2).is-hover {
+  align-items: flex-end;
+  height: 4.5em;
 }
 
 .email,

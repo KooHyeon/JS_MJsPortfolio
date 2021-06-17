@@ -23,7 +23,7 @@ function Init() {
 }
 window.setTimeout(function () {
     Init();
-    window.addEventListener('resize', Init, false);
+    window.addEventListener('road', Init);
 }, 15);
         
 
@@ -59,26 +59,65 @@ function fadeOut() {
 
 
 // Navbar toggle button
-const navbarOpenBtn = document.querySelector('.nav__toggle-btn')
-const navbarCloseBtn = document.querySelector('.nav__toggle-btn--off')
-const navbarToggleOn = document.querySelector('.nav--on')
-const navbarToggleOff = document.querySelector('.nav--off')
-navbarOpenBtn.addEventListener('click', () => {
-    navbarToggleOn.classList.toggle('hidden');
-    navbarToggleOff.classList.toggle('hidden');
+const openBtn = document.querySelector('.nav__toggle-btn')
+const closeBtn = document.querySelector('.nav__toggle-btn--off')
+const navToggleOn = document.querySelector('.nav--on')
+const navToggleOff = document.querySelector('.nav--off')
+const downArrow = document.querySelector('.down-arrow');
+
+openBtn.addEventListener('click', () => {
+    navToggleOn.classList.toggle('hidden');
+    navToggleOff.classList.toggle('hidden');
     downArrow.style.opacity = 0;
 })
-navbarCloseBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
     navbarToggleOn.classList.toggle('hidden');
     navbarToggleOff.classList.toggle('hidden');
 })
+
+//When hover projects previews
+
+const navOn = document.querySelector('.nav--on');
+const about = document.querySelector('.menu .menu__item:nth-child(2)');
+const categories = document.querySelectorAll('.projects-category');
+const previews = document.querySelectorAll('.projects-preview');
+const previewSection = document.querySelector('.preview-section')
+    
+categories.forEach(category =>
+  category.addEventListener('mouseover', () => {
+    navOn.classList.add('is-hover');
+    about.classList.add('is-hover');
+  })
+)
+
+categories.forEach(category =>
+  category.addEventListener('mouseout', () => {
+    navOn.classList.remove('is-hover');
+    about.classList.remove('is-hover');
+  })
+)
+
+previews.forEach(preview =>
+  preview.addEventListener('mouseover',  () => {
+    navOn.classList.add('is-hover');
+    about.classList.add('is-hover');
+  })
+)
+
+previews.forEach(preview =>
+  preview.addEventListener('mouseout',  () => {
+    navOn.classList.remove('is-hover');
+    about.classList.remove('is-hover');
+  })
+)
+
+
 
 
 // -------- index --------
 
 // Top & Down button function
 const toTopBtn = document.querySelector('.top-btn')
-const downArrow = document.querySelector('.down-arrow');
 
 window.addEventListener('scroll', arrowDisappear);
 
