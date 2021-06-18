@@ -71,15 +71,15 @@ openBtn.addEventListener('click', () => {
     downArrow.style.opacity = 0;
 })
 closeBtn.addEventListener('click', () => {
-    navbarToggleOn.classList.toggle('hidden');
-    navbarToggleOff.classList.toggle('hidden');
+    navToggleOn.classList.toggle('hidden');
+    navToggleOff.classList.toggle('hidden');
 })
 
 //When hover projects previews
 
 const navOn = document.querySelector('.nav--on');
 const about = document.querySelector('.menu .menu__item:nth-child(2)');
-const categories = document.querySelectorAll('.projects-category');
+const categories = document.querySelectorAll('.projects-category:not(:last-child)');
 const previews = document.querySelectorAll('.projects-preview');
 const previewSection = document.querySelector('.preview-section')
     
@@ -98,16 +98,18 @@ categories.forEach(category =>
 )
 
 previews.forEach(preview =>
-  preview.addEventListener('mouseover',  () => {
+  preview.addEventListener('mouseover', (hovered) => {
     navOn.classList.add('is-hover');
     about.classList.add('is-hover');
+    hovered.target.src = hovered.target.src.replace('_b', '_c');
   })
 )
 
 previews.forEach(preview =>
-  preview.addEventListener('mouseout',  () => {
+  preview.addEventListener('mouseout',  (hovered) => {
     navOn.classList.remove('is-hover');
     about.classList.remove('is-hover');
+    hovered.target.src = hovered.target.src.replace('_c', '_b');
   })
 )
 
