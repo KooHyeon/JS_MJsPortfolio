@@ -1,0 +1,384 @@
+:root {
+  scroll-behavior: smooth;
+  /* Color */
+  --color-blue: #4a3aff;
+  --color-yellow: #ffb950;
+  --color-black: #343434;
+  --color-grey: #8d8d8d;
+  --color-white: #fff;
+  /* font */
+  --font-size-xlarge: 4rem;
+  --font-size-large: 3rem;
+  --font-size-medium: 1.5rem;
+  --font-size-regular: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-xsmall: 0.6rem;
+
+  /* Annimation */
+  --animation-duration: 250ms;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+h2 {
+  color: var(--color-blue);
+}
+
+p {
+  text-indent: 1em;
+}
+
+/* Navbar */
+
+.nav--off {
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2.5em;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-blue);
+  opacity: 80%;
+  backdrop-filter: blur(3px);
+}
+
+.nav__toggle-btn {
+  position: absolute;
+  top: 0.5em;
+  left: 5.5em;
+  padding: 0.3em;
+  border: none;
+  background-color: transparent;
+}
+
+.nav__toggle-btn img,
+.nav__toggle-btn--off img {
+  width: 1.5em;
+}
+
+.logo--blue img,
+.logo--yellow img {
+  position: relative;
+  top: 0.1em;
+  width: 5.5em;
+}
+
+.nav--on {
+  z-index: 98;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  background: url("./src/indexViewSrc/menu/menu_background.png") center/cover
+    no-repeat;
+}
+
+.nav--on.is-hover {
+  height: 100%;
+}
+
+.nav--blue {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  height: 2.5em;
+  padding: 0.3em;
+  border-bottom: 1px solid var(--color-yellow);
+}
+
+.nav__toggle-btn--off {
+  position: absolute;
+  top: 0.4em;
+  left: 1.1em;
+  padding: 0.3em;
+  border: none;
+  background-color: transparent;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  margin-top: 0.4em;
+  width: 92%;
+  font-size: var(--font-size-xlarge);
+  color: var(--color-yellow);
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  width: 92vw;
+  padding: 0.5em 0.3em 0.3em 0.3em;
+  border-bottom: 1px solid var(--color-yellow);
+}
+
+.menu__title {
+  margin: 0 5% 0 2%;
+}
+
+.menu__title:hover {
+  color: var(--color-white);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse closest-side,
+    rgba(255, 185, 80, 1),
+    rgba(255, 185, 80, 0.9) 10%,
+    rgba(255, 185, 80, 0.5) 50%,
+    transparent
+  );
+}
+
+.projects-categories {
+  display: flex;
+  align-items: center;
+}
+
+.projects-categories::before {
+  content: "";
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  background: url("./src/indexViewSrc/Star.png") center/contain no-repeat;
+}
+
+.divider {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  background: url("./src/indexViewSrc/menu_divider.png") center/cover;
+}
+
+.projects-category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-medium);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 1em;
+  padding: 0.5em 1em;
+}
+
+.projects-category:hover {
+  color: var(--color-white);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse closest-side,
+    rgba(255, 185, 80, 1),
+    rgba(255, 185, 80, 0.9) 10%,
+    rgba(255, 185, 80, 0.5) 50%,
+    transparent
+  );
+}
+
+.projects-preview::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  left: 0px;
+  bottom: 100%;
+  height: 70px;
+}
+
+.projects-preview {
+  display: none;
+  top: 28%;
+  left: 30.5%;
+  align-items: center;
+  position: absolute;
+}
+
+.projects-category:hover ~ .projects-preview {
+  display: flex;
+}
+
+.projects-preview:hover {
+  display: flex;
+}
+
+.projects-preview:hover ~ .projects-category {
+  color: var(--color-white);
+}
+
+.projects-preview img {
+  width: 2.8em;
+  margin-right: 0.7em;
+  border: 1px solid var(--color-yellow);
+}
+
+.menu .menu__item:nth-child(2).is-hover {
+  align-items: flex-end;
+  height: 4.5em;
+}
+
+.email,
+.sns {
+  all: initial;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2em;
+  padding-right: 2em;
+  color: var(--color-yellow);
+  font-size: var(--font-size-medium);
+  line-height: 1.8;
+}
+
+.hidden {
+  display: none;
+}
+
+.down-arrow {
+  z-index: 3;
+  position: absolute;
+  top: 82vh;
+  left: calc(50vw - 3.25rem);
+  width: 6.5rem;
+  height: 3.5rem;
+}
+
+.top-btn {
+  z-index: 3;
+  position: absolute;
+  top: 220%;
+  left: calc(50vw - 3.25rem);
+  width: 6.5rem;
+  height: 3.5rem;
+}
+
+.top-btn img {
+  width: 6.5rem;
+  height: 3.5rem;
+}
+
+/* Projects */
+
+.sidebtns button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-small);
+  color: var(--color-blue);
+}
+
+.sidebtns img {
+  width: 4em;
+  height: 4em;
+  margin-bottom: 0.5em;
+}
+
+.next-btn {
+  position: fixed;
+  top: calc(50% - 2em);
+  left: 5%;
+}
+
+.previous-btn {
+  position: fixed;
+  top: calc(50% - 2em);
+  right: 5%;
+}
+
+.previous-btn img {
+  transform: scale(-1);
+}
+
+.project-detail {
+  position: absolute;
+  top: 2.5em;
+  left: 12.5%;
+  width: 75%;
+  height: 300%;
+  border-left: 1px solid var(--color-blue);
+  border-right: 1px solid var(--color-blue);
+}
+
+.project-intro .project-img {
+  width: 100%;
+  height: 35em;
+  background: url("./src/prejectSrc/dungji/1\ Main\ image\ 2x.png") center/cover
+    no-repeat;
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.project-info {
+  width: 100%;
+  padding: 2em 4em;
+  display: flex;
+}
+
+.project-title {
+  color: var(--color-blue);
+  font-size: var(--font-size-xlarge);
+  line-height: 1.3em;
+  margin-bottom: 0.2em;
+}
+
+.project-subtitle {
+  color: var(--color-blue);
+  font-size: var(--font-size-medium);
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.project-table {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.project-table tr {
+  border-top: 1px solid var(--color-blue);
+  border-bottom: 1px solid var(--color-blue);
+}
+
+.project-table th {
+  font-weight: 400;
+}
+
+.project-table td {
+  padding: 0.2em 5em;
+  white-space: nowrap;
+}
+
+.project-concept {
+  width: 50%;
+  margin-top: 5em;
+  margin-left: 5em;
+}
+
+.project-concept p {
+  margin-bottom: 2em;
+  line-height: 1.7;
+}
