@@ -82,7 +82,7 @@
         <div class="divider"></div>
         <address class="sns">
           <a href="">Instagram</a>
-          <a href="">Behance</a>
+          <a href="https://www.behance.net/mjeongkimm">Behance</a>
         </address>
       </li>
     </ul>
@@ -90,12 +90,13 @@
   <!-- Projects -->
 
   <div class="sidebtns">
-    <button class="previous-btn">
-      <img src="./src/prejectSrc/next_circle_w.png" alt="go to previous project">
+    <button class="previous-btn" alt="go to previous project">
+      <div class="previous-btn__image"></div>
       Previous
     </button>
-    <button class="next-btn">
-      <img src="./src/prejectSrc/next_circle_w.png" alt="go to next project">
+    </button>
+    <button class="next-btn" alt="go to next project">
+      <div class="next-btn__image"></div>
       Next
     </button>
   </div>
@@ -140,8 +141,56 @@
         </div>
       </div>
     </section>
+    <div class="slide1">
+      <input class="slide__radio" type="radio" name="floor-images" id="i1" checked>
+      <input class="slide__radio" type="radio" name="floor-images" id="i2">
+      <div class="slide__img1">
+        <div class=".project-img img2"><span class="img-description-in">1F_Floor plan</span>
+          <label for="i2" class="slide__nxt"></label>
+        </div>
+      </div>
+      <div class="slide__img2">
+        <div class=".project-img img3"><span class="img-description-in">2F_Floor plan</span></div>
+        <label for="i1" class="slide__pre"></label>
+      </div>
+      <div class="slide__nav">
+        <label for="i2" class="dots" id="dot1">
+          <span>1/2</span> <span>2/2</span>
+        </label>
+        <label for="i1" class="dots" id="dot2">
+        </label>
+      </div>
+    </div>
+    <div class="project-description">
+      <p>공동으로 사용하는 공간을 1층에, 개인공간을 2층에 배치하여 수직공간을 구성하였다. 주출입구로 들어서면 정면에 보이는 거실-부엌-다이닝 공간을 한 축으로 하며, 왼쪽의 복도로 들어서면 창고-2층으로
+        통하는
+        계단-세탁실의 축이 이어진다.
+      </p>
+      <p>또한 1층 공간은 중정을 사이에 두고 거실, 부엌 등의 생활에 필수적인 기능을 담당하는 공간과 거주자들의 스튜디오 역할을 하는 작업공간을 마주보게 배치하였다. 작업공간은 생활공간과 비교적 가깝지만
+        중정을 지나는 동선
+        덕분에 심리적 거리를 두게 된다. 또한 작업공간은 2층의 개인공간으로 연결되는 계단과 여닫이문을 통해 느슨하게 연결됨과 동시에 분리된다.</p>
+    </div>
+    <div class="slide2">
+      <input class="slide__radio" type="radio" name="section-images" id="i2" checked>
+      <input class="slide__radio" type="radio" name="section-images" id="i3">
+      <div class="slide__img2">
+        <div class=".project-img img4"><span class="img-description-in">1F_Floor plan</span>
+          <label for="i2" class="slide__nxt"></label>
+        </div>
+      </div>
+      <div class="slide__img3">
+        <div class=".project-img img5"><span class="img-description-in">2F_Floor plan</span></div>
+        <label for="i1" class="slide__pre"></label>
+      </div>
+      <div class="slide__nav">
+        <label for="i2" class="dots" id="dot1">
+          <span>1/2</span> <span>2/2</span>
+        </label>
+        <label for="i1" class="dots" id="dot2">
+        </label>
+      </div>
+    </div>
   </section>
-
   <img src="./src/indexViewSrc/down_white.png" alt="" class="down-arrow">
   <button class="top-btn" type="button"><img src="./src/indexViewSrc/up_blue.png" alt=""></button>
 
