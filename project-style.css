@@ -272,7 +272,7 @@ p {
 .top-btn {
   z-index: 3;
   position: absolute;
-  top: 500%;
+  top: 1880%;
   left: calc(50vw - 3.25rem);
   width: 6.5rem;
   height: 3.5rem;
@@ -290,7 +290,7 @@ p {
   top: 2.5em;
   left: 12.5%;
   width: 75%;
-  height: 1500%;
+  height: 1950%;
   border-left: 1px solid var(--color-blue);
   border-right: 1px solid var(--color-blue);
 }
@@ -477,8 +477,6 @@ p {
 }
 
 .img2 {
-  z-index: -1;
-  position: absolute;
   width: 100%;
   height: 100%;
   background: url("./src/prejectSrc/dungji/2\ floor\ plan1.png") center/cover
@@ -486,15 +484,13 @@ p {
 }
 
 .img3 {
-  z-index: -1;
-  position: absolute;
   width: 100%;
   height: 100%;
   background: url("./src/prejectSrc/dungji/3\ floor\ plan2.png") center/cover
     no-repeat;
 }
 
-.img-description-in {
+.img-description--in {
   position: relative;
   top: 93%;
   left: 45%;
@@ -515,13 +511,173 @@ p {
 .slide2 {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 37em;
   margin-top: 4em;
 }
 
-.img4 {
-  background: url("./src/prejectSrc/dungji/4\ section\ plan1.png");
+.slide__img3,
+.slide__img4 {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
+
+.img4 {
+  width: 100%;
+  height: 100%;
+  background: url("./src/prejectSrc/dungji/4\ section\ plan1.png") center/cover
+    no-repeat;
+}
+
 .img5 {
-  background: url("./src/prejectSrc/dungji/4\ section\ plan2.png");
+  width: 100%;
+  height: 100%;
+  background: url("./src/prejectSrc/dungji/5\ section\ plan2.png") center/cover
+    no-repeat;
+}
+
+.img-description--out {
+  position: relative;
+  top: 102%;
+  left: 45%;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--color-grey);
+}
+
+.slide__img3 .img-description--out,
+.slide__img4 .img-description--out {
+  display: none;
+}
+
+.slide2 #dot1,
+.slide2 #dot2 {
+  top: 20%;
+}
+
+#i3:checked ~ .slide__img3,
+#i4:checked ~ .slide__img4 {
+  z-index: 9;
+}
+
+#i3:checked ~ .slide__img3 .img-description--out,
+#i4:checked ~ .slide__img4 .img-description--out {
+  display: block;
+}
+
+#i3:checked ~ .slide__nav #dot1,
+#i4:checked ~ .slide__nav #dot2 {
+  background: var(--color-blue);
+}
+
+#i3:checked ~ .slide__nav #dot1 span:nth-child(1),
+#i4:checked ~ .slide__nav #dot1 span:nth-child(2) {
+  display: block;
+}
+
+.img6 {
+  width: 100%;
+  height: 120em;
+  background: url("./src/prejectSrc/dungji/6\ Axonometric\ Section.png")
+    center/cover no-repeat;
+}
+
+.img-description--out.forimg6 {
+  top: 0.2%;
+  left: 42.5%;
+}
+
+.img7 {
+  margin-top: 15em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/7.png") center/cover no-repeat;
+}
+
+.img8 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/8.png") center/cover no-repeat;
+}
+
+.img9 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/9.png") center/cover no-repeat;
+}
+
+.img10 {
+  display: inline-block;
+  margin-top: 5em;
+  padding: 0;
+  width: 48%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/10.png") center/cover no-repeat;
+}
+
+.img11 {
+  display: inline-block;
+  margin-top: 5em;
+  margin-left: 4.001%;
+  width: 48%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/11.png") center/cover no-repeat;
+}
+
+.img12 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/12.png") center/cover no-repeat;
+}
+
+.img13 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/13.png") center/cover no-repeat;
+}
+
+.img14 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/14.png") center/cover no-repeat;
+}
+
+.img15 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/15.png") center/cover no-repeat;
+}
+
+.img16 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/16.png") center/cover no-repeat;
+}
+
+.img17 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/17.png") center/cover no-repeat;
+}
+
+.img18 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/dungji/18.png") center/cover no-repeat;
+}
+
+.related-projects {
+  width: 100%;
+  height: 20em;
+  border: 1px solid var(--color-blue);
 }
