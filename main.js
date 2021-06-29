@@ -131,9 +131,48 @@ function arrowDisappear() {
     } else if (window.scrollY < 10) {
         downArrow.style.opacity = 1;
     }
-
 }
 
 function toTheTop() {
     window.scrollTo(0, 0);
 }
+
+// -------- project -------- 
+
+const leftBtn = document.querySelector('.sidearea--left button');
+const rightBtn = document.querySelector('.sidearea--right button');
+
+window.addEventListener('scroll', sideBtnDisappear);
+
+function sideBtnDisappear() {
+    if (window.scrollY > 200) {
+      leftBtn.style.opacity = 1 - window.scrollY / 400;
+      rightBtn.style.opacity = 1 - window.scrollY / 400;
+    } else if (window.scrollY < 10) {
+      leftBtn.style.opacity = 1;
+      rightBtn.style.opacity = 1;
+    }
+}
+
+const leftArea = document.querySelector('.sidearea--left');
+const rightArea = document.querySelector('.sidearea--right');
+
+leftArea.addEventListener('mouseover', leftBtnAppear);
+leftArea.addEventListener('mouseout', leftBtnDisappear);
+rightArea.addEventListener('mouseover', rightBtnAppear);
+rightArea.addEventListener('mouseout', rightBtnDisappear);
+
+function leftBtnAppear() {
+  leftBtn.style.opacity = 1;
+}
+function leftBtnDisappear() {
+  leftBtn.style.opacity = 0;
+}
+function rightBtnAppear() {
+  rightBtn.style.opacity = 1;
+}
+function rightBtnDisappear() {
+  rightBtn.style.opacity = 0;
+}
+
+

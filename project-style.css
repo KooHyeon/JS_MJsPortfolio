@@ -290,21 +290,44 @@ p {
   top: 2.5em;
   margin: 0 auto;
   width: 75%;
-  height: 1950%;
+  height: 1930%;
   padding-bottom: 20em;
   border-left: 1px solid var(--color-blue);
   border-right: 1px solid var(--color-blue);
   border-bottom: 1px solid var(--color-blue);
 }
 
-.sidebtns button {
+.sidearea--left {
+  position: absolute;
+  width: 12.5%;
+  height: 1930%;
+}
+
+.sidearea--right {
+  position: absolute;
+  right: 0;
+  width: 12.5%;
+  height: 1930%;
+}
+
+.sidearea--left button {
+  left: 5%;
+  transition: var(--animation-duration);
+}
+
+.sidearea--right button {
+  left: 92.5%;
+  transition: var(--animation-duration);
+}
+
+.side-btn {
   font-size: var(--font-size-small);
   color: var(--color-blue);
   position: fixed;
   top: calc(50% - 2.5em);
 }
 
-.sidebtns div {
+.side-btn div {
   width: 4em;
   height: 4.2em;
   margin-bottom: 0.5em;
@@ -312,6 +335,7 @@ p {
 
 .previous-btn__image {
   background: url("./src/prejectSrc/next_circle_w.png") center/contain no-repeat;
+  transition: var(--animation-duration);
 }
 
 .previous-btn__image:hover {
@@ -321,18 +345,11 @@ p {
 .next-btn__image {
   background: url("./src/prejectSrc/next_circle_w.png") center/contain no-repeat;
   transform: scale(-1);
+  transition: var(--animation-duration);
 }
 
 .next-btn__image:hover {
   background: url("./src/prejectSrc/next_circle_b.png") center/contain no-repeat;
-}
-
-.previous-btn {
-  left: 5%;
-}
-
-.next-btn {
-  left: 92.5%;
 }
 
 .project-intro .project-img {
