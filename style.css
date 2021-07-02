@@ -59,6 +59,12 @@ h2 {
   background: url("./src/indexViewSrc/menu/menu_background.png") center/cover;
   background-size: cover;
   overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.before-load .loader {
+  opacity: 1;
 }
 
 @keyframes title-ani {

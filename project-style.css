@@ -272,7 +272,7 @@ p {
 .top-btn {
   z-index: 3;
   position: absolute;
-  top: 1850%;
+  top: 1820%;
   left: calc(50vw - 3.25rem);
   width: 6.5rem;
   height: 3.5rem;
@@ -290,7 +290,7 @@ p {
   top: 2.5em;
   margin: 0 auto;
   width: 75%;
-  height: 1930%;
+  height: 1950%;
   padding-bottom: 20em;
   border-left: 1px solid var(--color-blue);
   border-right: 1px solid var(--color-blue);
@@ -300,14 +300,14 @@ p {
 .sidearea--left {
   position: absolute;
   width: 12.5%;
-  height: 1930%;
+  height: 1890%;
 }
 
 .sidearea--right {
   position: absolute;
   right: 0;
   width: 12.5%;
-  height: 1930%;
+  height: 1890%;
 }
 
 .sidearea--left button {
