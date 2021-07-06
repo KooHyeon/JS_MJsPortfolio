@@ -5,6 +5,7 @@
   --color-yellow: #ffb950;
   --color-black: #343434;
   --color-grey: #8d8d8d;
+  --color-light-grey: #e0e0e0;
   --color-white: #fff;
   /* font */
   --font-size-xlarge: 4rem;
@@ -272,7 +273,7 @@ p {
 .top-btn {
   z-index: 3;
   position: absolute;
-  top: 1820%;
+  top: 870rem;
   left: calc(50vw - 3.25rem);
   width: 6.5rem;
   height: 3.5rem;
@@ -290,7 +291,7 @@ p {
   top: 2.5em;
   margin: 0 auto;
   width: 75%;
-  height: 1950%;
+  height: 100%;
   padding-bottom: 20em;
   border-left: 1px solid var(--color-blue);
   border-right: 1px solid var(--color-blue);
@@ -300,14 +301,14 @@ p {
 .sidearea--left {
   position: absolute;
   width: 12.5%;
-  height: 1890%;
+  height: 100%;
 }
 
 .sidearea--right {
   position: absolute;
   right: 0;
   width: 12.5%;
-  height: 1890%;
+  height: 100%;
 }
 
 .sidearea--left button {
@@ -760,4 +761,53 @@ p {
 
 .related-projects__arrow {
   width: 3%;
+}
+
+/* Pop-up window when img clicked */
+.img-window {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-window img {
+  max-height: 90vh;
+  max-width: 90vw;
+}
+
+.img-btn-prev {
+  display: block;
+  position: fixed;
+  top: 48vh;
+  left: 1em;
+  padding: 1em;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.img-btn-prev img {
+  width: 3em;
+  transform: scale(-1);
+}
+
+.img-btn-next {
+  display: block;
+  position: fixed;
+  top: 48vh;
+  right: 1em;
+  padding: 1em;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.img-btn-next img {
+  width: 3em;
 }
