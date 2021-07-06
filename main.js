@@ -1,4 +1,27 @@
 // Logo Elipse Size
+new Image().src = './src/loadingViewSrc/background_grain.png';
+
+const loader = document.querySelector('.loader');
+
+setTimeout(function () {
+  Init();
+  textRotate();
+}, 1);
+
+
+
+window.addEventListener('load', () => {
+  setTimeout(function() {
+    document.body.classList.remove('before-load');
+},3000)
+});
+
+loader.addEventListener('transitionend', (e) => {
+  clearTimeout(Init);
+  clearTimeout(textRotate);
+  document.body.removeChild(e.currentTarget);
+})
+
 function Init() {
     let w = window.innerWidth;
     let h = window.innerHeight * 0.8;
@@ -15,11 +38,6 @@ function Init() {
     text.style.fontSize = paths_length / 50;
 }
 
-window.setTimeout(function () {
-    Init();
-    window.addEventListener('load', Init);
-}, 15);
-
 
 // Logo Text Rotate
 let startText = 0;
@@ -34,17 +52,7 @@ function textRotate() {
   startText += 0.02;
 }
 
-textRotate()
 
-const loader = document.querySelector('.loader');
-
-window.addEventListener('load', () => {
-  document.body.classList.remove('before-load');
-});
-
-loader.addEventListener('transitionend', (e) => {
-  document.body.removeChild(e.currentTarget);
-})
 
 //-------- navbar --------
 

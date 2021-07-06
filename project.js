@@ -115,52 +115,68 @@ function rightBtnDisappear() {
   if (window.scrollY > 10) rightBtn.style.opacity = 0;
 }
 
-// project when img  clicked
+// new window when img  clicked
 
 const projectImgs = document.querySelectorAll(".project-img");
+const projectName = document.head
+  .querySelector("meta[name='keywords']")
+  .getAttribute("content");
 const windoWidth = window.innerWidth;
+const body = document.body;
 let getLatestOpenedImg;
+let clickedImg;
+
+console.log(projectName);
 
 if (projectImgs) {
   projectImgs.forEach((img, index) => {
     img.addEventListener("click", () => {
-      const getCss = window.getComputedStyle(img);
-      const getImgUrl = getCss.getPropertyValue("background-image");
-      const imgUrl = getImgUrl.split("src/prejectSrc/dungji/");
-      const setNewUrl = imgUrl[1].replace('")', "");
+      const newUrl = getImgUrl(img);
+      setImg(index, newUrl);
 
-      getLatestOpenedImg = index + 1;
-
-      const container = document.body;
-      const newImgWindow = document.createElement("div");
-      container.appendChild(newImgWindow);
-      newImgWindow.setAttribute("class", "img-window");
-      newImgWindow.setAttribute("onclick", "closeImg()");
-
-      const newImg = document.createElement("img");
-      newImgWindow.appendChild(newImg);
-      newImg.setAttribute("src", "src/prejectSrc/dungji/" + setNewUrl);
-      newImg.setAttribute("id", "current-img");
-
-      newImg.onload = function () {
-        const newPrevBtn = document.createElement("button");
-        const btnPrevImg = document.createElement("img");
-        btnPrevImg.src = "./src/prejectSrc/next_arrow.png";
-        newPrevBtn.appendChild(btnPrevImg);
-        container.appendChild(newPrevBtn);
-        newPrevBtn.setAttribute("class", "img-btn-prev");
-        newPrevBtn.setAttribute("onclick", "changeImg(1)");
-
-        const newNextBtn = document.createElement("button");
-        const btnNextImg = document.createElement("img");
-        btnNextImg.src = "./src/prejectSrc/next_arrow.png";
-        newNextBtn.appendChild(btnNextImg);
-        container.appendChild(newNextBtn);
-        newNextBtn.setAttribute("class", "img-btn-next");
-        newNextBtn.setAttribute("onclick", "changeImg(0)");
-      };
+      clickedImg.addEventListener("load", createBtn);
     });
   });
+}
+
+function getImgUrl(img, index) {
+  const getCss = window.getComputedStyle(img);
+  const getImg = getCss.getPropertyValue("background-image");
+  const imgUrl = getImg.split("src/prejectSrc/");
+  const newUrl = imgUrl[1].replace('")', "");
+  return newUrl;
+}
+
+function setImg(index, newUrl) {
+  getLatestOpenedImg = index + 1;
+
+  const newImgWindow = document.createElement("div");
+  body.appendChild(newImgWindow);
+  newImgWindow.setAttribute("class", "img-window");
+  newImgWindow.setAttribute("onclick", "closeImg()");
+
+  clickedImg = document.createElement("img");
+  newImgWindow.appendChild(clickedImg);
+  clickedImg.setAttribute("src", `src/prejectSrc/${newUrl}`);
+  clickedImg.setAttribute("id", "current-img");
+}
+
+function createBtn() {
+  const newPrevBtn = document.createElement("button");
+  const btnPrevImg = document.createElement("img");
+  btnPrevImg.src = "./src/prejectSrc/next_arrow.png";
+  newPrevBtn.appendChild(btnPrevImg);
+  body.appendChild(newPrevBtn);
+  newPrevBtn.setAttribute("class", "img-btn-prev");
+  newPrevBtn.setAttribute("onclick", "changeImg(1)");
+
+  const newNextBtn = document.createElement("button");
+  const btnNextImg = document.createElement("img");
+  btnNextImg.src = "./src/prejectSrc/next_arrow.png";
+  newNextBtn.appendChild(btnNextImg);
+  body.appendChild(newNextBtn);
+  newNextBtn.setAttribute("class", "img-btn-next");
+  newNextBtn.setAttribute("onclick", "changeImg(0)");
 }
 
 function closeImg() {
@@ -173,24 +189,27 @@ function changeImg(changeDir) {
   document.querySelector("#current-img").remove();
 
   const getImgWindow = document.querySelector(".img-window");
-  const newImg = document.createElement("img");
-  getImgWindow.appendChild(newImg);
+  const clickedImg = document.createElement("img");
+  getImgWindow.appendChild(clickedImg);
 
   let calcNewImg;
   if (changeDir == 1) {
-    calcNewImg = getLatestOpenedImg + 1;
-    if (calcNewImg > projectImgs.length) {
-      calcNewImg = 1;
-    }
-  } else {
     calcNewImg = getLatestOpenedImg - 1;
     if (calcNewImg < 1) {
       calcNewImg = projectImgs.length;
     }
+  } else if (changeDir == 0) {
+    calcNewImg = getLatestOpenedImg + 1;
+    if (calcNewImg > projectImgs.length) {
+      calcNewImg = 1;
+    }
   }
 
-  newImg.setAttribute("src", "src/prejectSrc/dungji/" + calcNewImg + ".png");
-  newImg.setAttribute("id", "current-img");
+  clickedImg.setAttribute(
+    "src",
+    `src/prejectSrc/${projectName}/${calcNewImg}.png`
+  );
+  clickedImg.setAttribute("id", "current-img");
 
   getLatestOpenedImg = calcNewImg;
 }
