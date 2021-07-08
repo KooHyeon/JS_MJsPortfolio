@@ -26,6 +26,7 @@
   top: 45%;
   width: 3em;
   height: 3.5em;
+  padding: 2em;
   background: url("./src/prejectSrc/next_arrow.png") center/contain no-repeat;
   cursor: pointer;
 }
@@ -60,7 +61,7 @@
 #dot2 {
   z-index: 9;
   position: relative;
-  top: 1%;
+  top: 5%;
   left: 94%;
   width: 18px;
   height: 18px;
@@ -189,20 +190,21 @@
   background: url("./src/prejectSrc/dungji/9.png") center/cover no-repeat;
 }
 
-.img10 {
-  display: inline-block;
+.project-imgs-two {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40em;
   margin-top: 5em;
-  padding: 0;
-  width: 48%;
+}
+.img10 {
+  width: 49%;
   height: 40em;
   background: url("./src/prejectSrc/dungji/10.png") center/cover no-repeat;
 }
 
 .img11 {
-  display: inline-block;
-  margin-top: 5em;
-  margin-left: 3.58%;
-  width: 48%;
+  width: 49%;
   height: 40em;
   background: url("./src/prejectSrc/dungji/11.png") center/cover no-repeat;
 }
@@ -254,4 +256,8 @@
   width: 100%;
   height: 40em;
   background: url("./src/prejectSrc/dungji/18.png") center/cover no-repeat;
+}
+
+.top-btn {
+  top: 1470%;
 }
