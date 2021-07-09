@@ -126,8 +126,6 @@ const body = document.body;
 let getLatestOpenedImg;
 let clickedImg;
 
-console.log(projectName);
-
 if (projectImgs) {
   projectImgs.forEach((img, index) => {
     img.addEventListener("click", () => {

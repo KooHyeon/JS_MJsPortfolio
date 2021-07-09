@@ -1,3 +1,7 @@
+.project-detail {
+  padding-bottom: 0;
+}
+
 .img1 {
   background: url("./src/prejectSrc/cathouse/1.png") bottom/cover no-repeat;
 }
@@ -48,8 +52,9 @@
 .slide1 {
   position: relative;
   width: 100%;
-  height: 48em;
-  margin-top: 2em;
+  height: 50em;
+  margin-top: 5em;
+  background-color: rgba(233, 233, 233, 1);
 }
 
 .slide__radio {
@@ -57,7 +62,9 @@
 }
 
 .slide__img1,
-.slide__img2 {
+.slide__img2,
+.slide__img3 {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -67,8 +74,8 @@
 .slide__nxt {
   position: absolute;
   top: 45%;
-  width: 3em;
-  height: 3.5em;
+  width: 4em;
+  height: 4.5em;
   background: url("./src/prejectSrc/next_arrow.png") center/contain no-repeat;
   cursor: pointer;
 }
@@ -86,6 +93,7 @@
   position: absolute;
   width: 100%;
   height: 20%;
+  top: 0;
   display: flex;
   flex-direction: column;
 }
@@ -100,10 +108,11 @@
 }
 
 #dot1,
-#dot2 {
+#dot2,
+#dot3 {
   z-index: 9;
   position: relative;
-  top: 1%;
+  top: 10%;
   left: 94%;
   width: 18px;
   height: 18px;
@@ -114,19 +123,89 @@
 }
 
 #i1:checked ~ .slide__img1,
-#i2:checked ~ .slide__img2 {
-  z-index: 9;
+#i2:checked ~ .slide__img2,
+#i3:checked ~ .slide__img3 {
+  display: block;
 }
 
 #i1:checked ~ .slide__nav #dot1,
-#i2:checked ~ .slide__nav #dot2 {
+#i2:checked ~ .slide__nav #dot2,
+#i3:checked ~ .slide__nav #dot3 {
   background: var(--color-blue);
 }
 
 #i1:checked ~ .slide__nav #dot1 span:nth-child(1),
-#i2:checked ~ .slide__nav #dot1 span:nth-child(2) {
+#i2:checked ~ .slide__nav #dot1 span:nth-child(2),
+#i3:checked ~ .slide__nav #dot1 span:nth-child(3) {
   display: block;
 }
 
 .img5 {
+  width: 100%;
+  height: 50em;
+  background: url(./src/prejectSrc/cathouse/5_1.png) center/contain no-repeat;
+}
+
+.img6 {
+  width: 100%;
+  height: 50em;
+  background: url(./src/prejectSrc/cathouse/5_2.png) center/contain no-repeat;
+}
+
+.img7 {
+  width: 100%;
+  height: 50em;
+  background: url(./src/prejectSrc/cathouse/5_3.png) center/contain no-repeat;
+}
+
+.green-background {
+  text-align: center;
+  height: 100%;
+  margin-top: 15em;
+  background-color: rgba(227, 241, 239, 1);
+  padding-bottom: 12em;
+}
+
+.green-background h2 {
+  margin-top: 2em;
+}
+
+.img8 {
+  width: 100%;
+  height: 50em;
+  background: url(./src/prejectSrc/cathouse/6.png) center/contain no-repeat;
+}
+
+.grid-descriptions {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.img9 {
+  margin-top: 7em;
+  width: 100%;
+  height: 37em;
+  background: url(./src/prejectSrc/cathouse/7.png) center/contain no-repeat;
+}
+
+.img10 {
+  margin-top: 3em;
+  width: 100%;
+  height: 40em;
+  background: url(./src/prejectSrc/cathouse/8.png) center/contain no-repeat;
+}
+
+.img11 {
+  margin-top: 3em;
+  width: 100%;
+  height: 45em;
+  background: url(./src/prejectSrc/cathouse/9.png) center/contain no-repeat;
+}
+
+.credit {
+  margin-top: 12em;
+  color: var(--color-grey);
+  font-style: oblique;
+  line-height: 2em;
 }

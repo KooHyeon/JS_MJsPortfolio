@@ -273,8 +273,7 @@ p {
 .top-btn {
   z-index: 3;
   position: absolute;
-  top: 870rem;
-  left: calc(50vw - 3.25rem);
+  bottom: 5em;
   width: 6.5rem;
   height: 3.5rem;
 }
@@ -299,7 +298,6 @@ p {
   align-items: center;
   border-left: 1px solid var(--color-blue);
   border-right: 1px solid var(--color-blue);
-  border-bottom: 1px solid var(--color-blue);
 }
 
 .sidearea--left {
@@ -434,8 +432,9 @@ p {
 
 .img-description--out {
   position: relative;
+  display: flex;
+  justify-content: center;
   top: 102%;
-  left: 40%;
   font-style: italic;
   font-weight: 300;
   color: var(--color-grey);
@@ -449,7 +448,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--color-blue);
+  border-top: 1px solid var(--color-blue);
 }
 
 .related-projects__containers {
@@ -466,6 +465,9 @@ p {
   height: 100%;
   cursor: pointer;
   border-top: 1px solid var(--color-blue);
+}
+
+.related-projects__container:last-child {
   border-left: 1px solid var(--color-blue);
 }
 
