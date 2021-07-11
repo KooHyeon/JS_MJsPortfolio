@@ -129,6 +129,7 @@ let clickedImg;
 if (projectImgs) {
   projectImgs.forEach((img, index) => {
     img.addEventListener("click", () => {
+      console.log(img, index);
       const newUrl = getImgUrl(img);
       setImg(index, newUrl);
 
@@ -136,6 +137,10 @@ if (projectImgs) {
     });
   });
 }
+const sliceNext = document.querySelector(".slide__nxt");
+sliceNext.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
 
 function getImgUrl(img, index) {
   const getCss = window.getComputedStyle(img);
