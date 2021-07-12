@@ -132,14 +132,25 @@ if (projectImgs) {
       console.log(img, index);
       const newUrl = getImgUrl(img);
       setImg(index, newUrl);
-
       clickedImg.addEventListener("load", createBtn);
     });
   });
 }
-const sliceNext = document.querySelector(".slide__nxt");
-sliceNext.addEventListener("click", (e) => {
-  e.stopPropagation();
+
+// +Slide Btn 전파 방지
+const slidePrevBtn = document.querySelectorAll(".slide_prev");
+const slideNextBtn = document.querySelectorAll(".slide__nxt");
+
+slideNextBtn.forEach((NextBtn) => {
+  NextBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
+
+slidePrevBtn.forEach((PrevBtn) => {
+  PrevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 });
 
 function getImgUrl(img, index) {
