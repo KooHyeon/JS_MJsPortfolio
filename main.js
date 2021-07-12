@@ -1,13 +1,19 @@
+"use strict";
+
+// Load Background Imgae
+
+function preloadImage() {
+  var img = new Image();
+  img.src = "./src/indexViewSrc/menu/menu_background.png";
+}
+
 // Logo Elipse Size
-new Image().src = "./src/loadingViewSrc/background_grain.png";
 
 const loader = document.querySelector(".loader");
 let endOfLoading = false;
 
 window.addEventListener("load", () => {
-  // setTimeout(function () {
-  //   document.body.classList.remove("before-load");
-  // }, 3000);
+  preloadImage();
   Init();
   textRotate();
 });
