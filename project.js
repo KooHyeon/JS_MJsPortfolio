@@ -1,3 +1,4 @@
+"use strict";
 //-------- navbar --------
 
 // Navbar toggle button
@@ -80,8 +81,8 @@ function toTheTop() {
 
 // -------- project --------
 
-const leftBtn = document.querySelector(".sidearea--left button");
-const rightBtn = document.querySelector(".sidearea--right button");
+const leftBtn = document.querySelector(".sidearea--left a");
+const rightBtn = document.querySelector(".sidearea--right a");
 
 window.addEventListener("scroll", sideBtnDisappear);
 
@@ -138,7 +139,7 @@ if (projectImgs) {
 }
 
 // +Slide Btn 전파 방지
-const slidePrevBtn = document.querySelectorAll(".slide_prev");
+const slidePrevBtn = document.querySelectorAll(".slide_pre");
 const slideNextBtn = document.querySelectorAll(".slide__nxt");
 
 slideNextBtn.forEach((NextBtn) => {

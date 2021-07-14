@@ -313,12 +313,12 @@ p {
   height: 100%;
 }
 
-.sidearea--left button {
+.sidearea--left a {
   left: 5%;
   transition: var(--animation-duration);
 }
 
-.sidearea--right button {
+.sidearea--right a {
   left: 92.5%;
   transition: var(--animation-duration);
 }
@@ -328,11 +328,15 @@ p {
   color: var(--color-blue);
   position: fixed;
   top: calc(50% - 2.5em);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .side-btn div {
   width: 4em;
-  height: 4.2em;
+  height: 4em;
   margin-bottom: 0.5em;
 }
 
@@ -410,6 +414,17 @@ p {
 .project-concept p {
   line-height: 1.7;
   margin-bottom: 1em;
+}
+
+@media screen and (max-width: 1024px) {
+  .project-info {
+    flex-direction: column;
+  }
+
+  .project-concept {
+    width: 80%;
+    margin-left: 0;
+  }
 }
 
 .img-description--in {
