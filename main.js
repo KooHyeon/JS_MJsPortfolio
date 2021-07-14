@@ -1,19 +1,11 @@
 "use strict";
 
-// Load Background Imgae
-
-function preloadImage() {
-  var img = new Image();
-  img.src = "./src/indexViewSrc/menu/menu_background.png";
-}
-
 // Logo Elipse Size
 
 const loader = document.querySelector(".loader");
 let endOfLoading = false;
 
 window.addEventListener("load", () => {
-  preloadImage();
   Init();
   textRotate();
 });
