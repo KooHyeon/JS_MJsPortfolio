@@ -302,6 +302,7 @@ p {
 
 .sidearea--left {
   position: absolute;
+  left: 0;
   width: 12.5%;
   height: 100%;
 }
@@ -434,6 +435,12 @@ p {
   font-style: italic;
   font-weight: 300;
   color: var(--color-grey);
+}
+
+.project-description-title {
+  font-size: var(--font-size-medium);
+  color: var(--color-black);
+  margin-bottom: -2em;
 }
 
 .project-description {

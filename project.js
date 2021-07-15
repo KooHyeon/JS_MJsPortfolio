@@ -139,7 +139,7 @@ if (projectImgs) {
 }
 
 // +Slide Btn 전파 방지
-const slidePrevBtn = document.querySelectorAll(".slide_pre");
+const slidePrevBtn = document.querySelectorAll(".slide__pre");
 const slideNextBtn = document.querySelectorAll(".slide__nxt");
 
 slideNextBtn.forEach((NextBtn) => {
