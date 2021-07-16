@@ -308,7 +308,7 @@ p {
 }
 
 .sidearea--right {
-  position: absolute;
+  position: fixed;
   right: 0;
   width: 12.5%;
   height: 100%;
