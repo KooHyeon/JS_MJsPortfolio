@@ -4,9 +4,11 @@
   --color-blue: #4a3aff;
   --color-yellow: #ffb950;
   --color-black: #343434;
+  --color-dark-gey: #4e4e4e;
   --color-grey: #8d8d8d;
   --color-light-grey: #e0e0e0;
   --color-white: #fff;
+  --color-aqua: #5ca4bb;
   /* font */
   --font-size-xlarge: 4rem;
   --font-size-large: 3rem;
@@ -438,6 +440,9 @@ p {
 }
 
 .project-description-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   font-size: var(--font-size-medium);
   color: var(--color-black);
   margin-bottom: -2em;
@@ -454,13 +459,25 @@ p {
 
 .img-description--out {
   position: relative;
+  top: 102%;
   display: flex;
   justify-content: center;
-  top: 102%;
+  align-items: center;
+  text-align: center;
+  margin-top: 2em;
   font-style: italic;
   font-weight: 300;
   color: var(--color-grey);
 }
+
+.credit {
+  text-align: center;
+  margin-top: 12em;
+  color: var(--color-grey);
+  font-style: oblique;
+  line-height: 2em;
+}
+
 /* related project */
 
 .related-projects {

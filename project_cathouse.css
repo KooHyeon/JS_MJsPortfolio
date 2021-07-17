@@ -196,10 +196,3 @@
   height: 45em;
   background: url(./src/prejectSrc/cathouse/9.png) center/contain no-repeat;
 }
-
-.credit {
-  margin-top: 12em;
-  color: var(--color-grey);
-  font-style: oblique;
-  line-height: 2em;
-}
