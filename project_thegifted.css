@@ -1,0 +1,438 @@
+.img1 {
+  background: url("./src/prejectSrc/thegifted/1.png") bottom/cover no-repeat;
+}
+
+.slide1 {
+  position: relative;
+  width: 100%;
+  height: 64em;
+  margin-top: 5em;
+  background-color: rgba(233, 233, 233, 1);
+}
+
+.slide1 .img-description--out {
+  position: relative;
+  top: 2%;
+}
+
+.slide-in-description {
+  margin-top: 2em;
+}
+
+.slide__radio {
+  display: none;
+}
+
+.slide__img1,
+.slide__img2,
+.slide__img3 {
+  display: none;
+  position: absolute;
+  margin-top: 4em;
+  width: 100%;
+  height: 100%;
+}
+
+.slide__pre,
+.slide__nxt {
+  position: absolute;
+  top: 35%;
+  width: 4em;
+  height: 4.5em;
+  background: url("./src/prejectSrc/next_arrow.png") center/contain no-repeat;
+  cursor: pointer;
+}
+
+.slide__pre {
+  left: 2.5%;
+  transform: scale(-1);
+}
+
+.slide__nxt {
+  left: 92.5%;
+}
+
+.slide__nav {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide__nav span {
+  position: absolute;
+  top: -20%;
+  left: -300%;
+  color: var(--color-blue);
+  font-weight: 300;
+  display: none;
+}
+
+#dot1,
+#dot2,
+#dot3 {
+  z-index: 9;
+  position: relative;
+  top: 10%;
+  left: 94%;
+  width: 18px;
+  height: 18px;
+  margin: 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid var(--color-blue);
+}
+
+#i1:checked ~ .slide__img1,
+#i2:checked ~ .slide__img2,
+#i3:checked ~ .slide__img3 {
+  display: block;
+}
+
+#i1:checked ~ .slide__nav #dot1,
+#i2:checked ~ .slide__nav #dot2,
+#i3:checked ~ .slide__nav #dot3 {
+  background: var(--color-blue);
+}
+
+#i1:checked ~ .slide__nav #dot1 span:nth-child(1),
+#i2:checked ~ .slide__nav #dot1 span:nth-child(2),
+#i3:checked ~ .slide__nav #dot1 span:nth-child(3) {
+  display: block;
+}
+
+.img2 {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/2-1.png") bottom/contain no-repeat;
+}
+
+.img3 {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/2-2.png") bottom/contain no-repeat;
+}
+
+.img4 {
+  position: relative;
+  left: 10%;
+  width: 80%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/2-3.png") bottom/contain no-repeat;
+}
+
+.img5 {
+  margin-top: 5em;
+  width: 100%;
+  height: 30em;
+  background: url("./src/prejectSrc/thegifted/3.png") center/contain no-repeat;
+}
+
+.img6 {
+  margin-top: 5em;
+  margin-bottom: 2em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/4.png") center/contain no-repeat;
+}
+
+.img7 {
+  margin-top: 5em;
+  width: 100%;
+  height: 42em;
+  background: url("./src/prejectSrc/thegifted/5.png") center/cover no-repeat;
+}
+
+.img8 {
+  margin-top: 5em;
+  margin-bottom: 2em;
+  width: 100%;
+  height: 42em;
+  background: url("./src/prejectSrc/thegifted/6.png") center/cover no-repeat;
+}
+
+.slide2 {
+  position: relative;
+  width: 100%;
+  height: 40em;
+}
+
+.slide__img4,
+.slide__img5 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide2 .slide__pre,
+.slide2 .slide__nxt {
+  top: 45%;
+  background: url("./src/prejectSrc/next_arrow_w.png") center/contain no-repeat;
+}
+
+#dot4,
+#dot5 {
+  z-index: 9;
+  position: relative;
+  top: 10%;
+  left: 94%;
+  width: 18px;
+  height: 18px;
+  margin: 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid var(--color-white);
+}
+
+.slide2 span {
+  position: absolute;
+  top: -20%;
+  left: -300%;
+  color: var(--color-white);
+  font-weight: 300;
+  display: none;
+}
+
+#i4:checked ~ .slide__img4,
+#i5:checked ~ .slide__img5 {
+  display: block;
+}
+
+#i4:checked ~ .slide__nav #dot4,
+#i5:checked ~ .slide__nav #dot5 {
+  background: var(--color-white);
+}
+
+#i4:checked ~ .slide__nav #dot4 span:nth-child(1),
+#i5:checked ~ .slide__nav #dot4 span:nth-child(2) {
+  display: block;
+}
+
+.img9 {
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/7-1.png") center/cover no-repeat;
+}
+
+.img10 {
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/7-2.png") center/cover no-repeat;
+}
+
+.img11 {
+  margin-top: 5em;
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/8.png") center/cover no-repeat;
+}
+
+.grey-background {
+  width: 100%;
+  margin-top: 20em;
+  padding-bottom: 10em;
+  background-color: var(--color-light-grey);
+}
+
+.slide4 {
+  margin-top: 10em;
+  position: relative;
+  width: 100%;
+  height: 45em;
+}
+
+.slide__img6,
+.slide__img7 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide4 .slide__pre,
+.slide4 .slide__nxt {
+  top: 45%;
+}
+
+#dot6,
+#dot7 {
+  z-index: 9;
+  position: relative;
+  top: -55%;
+  left: 94%;
+  width: 18px;
+  height: 18px;
+  margin: 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid var(--color-blue);
+}
+
+#i6:checked ~ .slide__img6,
+#i7:checked ~ .slide__img7 {
+  display: block;
+}
+
+#i6:checked ~ .slide__nav #dot6,
+#i7:checked ~ .slide__nav #dot7 {
+  background: var(--color-blue);
+}
+
+#i6:checked ~ .slide__nav #dot6 span:nth-child(1),
+#i7:checked ~ .slide__nav #dot6 span:nth-child(2) {
+  display: block;
+}
+
+.img12 {
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/9-1.png") center/cover no-repeat;
+}
+
+.img13 {
+  width: 100%;
+  height: 40em;
+  background: url("./src/prejectSrc/thegifted/9-2.png") center/cover no-repeat;
+}
+
+.slide5 {
+  margin-top: 10em;
+  position: relative;
+  width: 100%;
+  height: 60em;
+}
+
+.slide__img8,
+.slide__img9 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide5 .slide__pre,
+.slide5 .slide__nxt {
+  top: 45%;
+}
+
+#dot8,
+#dot9 {
+  z-index: 9;
+  position: relative;
+  top: -55%;
+  left: 94%;
+  width: 18px;
+  height: 18px;
+  margin: 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid var(--color-blue);
+}
+
+#i8:checked ~ .slide__img8,
+#i9:checked ~ .slide__img9 {
+  display: block;
+}
+
+#i8:checked ~ .slide__nav #dot8,
+#i9:checked ~ .slide__nav #dot9 {
+  background: var(--color-blue);
+}
+
+#i8:checked ~ .slide__nav #dot8 span:nth-child(1),
+#i9:checked ~ .slide__nav #dot8 span:nth-child(2) {
+  display: block;
+}
+
+.img14 {
+  position: relative;
+  left: 7.5%;
+  width: 85%;
+  height: 60em;
+  background: url("./src/prejectSrc/thegifted/10-1.png") center/cover no-repeat;
+}
+
+.img15 {
+  position: relative;
+  left: 7.5%;
+  width: 85%;
+  height: 60em;
+  background: url("./src/prejectSrc/thegifted/10-2.png") center/cover no-repeat;
+}
+
+.scene-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.scene-images-row {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.img16 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-1.png") center/cover no-repeat;
+}
+
+.img17 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-2.png") center/cover no-repeat;
+}
+
+.img18 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-3.png") center/cover no-repeat;
+}
+
+.img19 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-4.png") center/cover no-repeat;
+}
+
+.img20 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-5.png") center/cover no-repeat;
+}
+
+.img21 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-6.png") center/cover no-repeat;
+}
+
+.img22 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-7.png") center/cover no-repeat;
+}
+
+.img23 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-8.png") center/cover no-repeat;
+}
+
+.img24 {
+  width: 33%;
+  height: 18em;
+  background: url("./src/prejectSrc/thegifted/11-9.png") center/cover no-repeat;
+}
