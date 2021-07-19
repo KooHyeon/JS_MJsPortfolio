@@ -13,6 +13,7 @@
 }
 
 .slide1 {
+  padding-top: 2em;
   position: relative;
   width: 100%;
   height: 65em;
@@ -20,12 +21,9 @@
   background-color: rgba(233, 233, 233, 1);
 }
 
-.slide-description {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 3em 0 3em 0;
-  color: var(--color-dark-gey);
+.slide1 span {
+  position: relative;
+  top: -2%;
 }
 
 .slide__radio {
@@ -44,7 +42,7 @@
 .slide__pre,
 .slide__nxt {
   position: absolute;
-  top: 45%;
+  top: 35%;
   width: 4em;
   height: 4.5em;
   background: url("./src/prejectSrc/next_arrow.png") center/contain no-repeat;
@@ -129,7 +127,7 @@
   background: url(/src/prejectSrc/evolo/3-3.png) center/contain no-repeat;
 }
 
-.slide1 .img-description--out {
+.slide1 p {
   all: unset;
   text-indent: 1em;
   width: 22em;
