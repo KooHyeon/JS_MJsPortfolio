@@ -11,6 +11,7 @@
 }
 
 .slide1 .img-description--out {
+  margin-top: 2em;
   position: relative;
   top: 2%;
 }

@@ -2,13 +2,15 @@
   scroll-behavior: smooth;
   /* Color */
   --color-blue: #4a3aff;
+  --color-aqua: #5ca4bb;
+  --color-brown: #bc9361;
   --color-yellow: #ffb950;
   --color-black: #343434;
   --color-dark-gey: #4e4e4e;
   --color-grey: #8d8d8d;
   --color-light-grey: #e0e0e0;
   --color-white: #fff;
-  --color-aqua: #5ca4bb;
+
   /* font */
   --font-size-xlarge: 4rem;
   --font-size-large: 3rem;
@@ -464,7 +466,6 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 2em;
   font-style: italic;
   font-weight: 300;
   color: var(--color-grey);
