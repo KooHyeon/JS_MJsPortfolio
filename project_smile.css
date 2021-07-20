@@ -1,0 +1,129 @@
+.img1 {
+  background: url(./src/prejectSrc/smile/1.png) center/cover no-repeat;
+}
+
+.img2 {
+  width: 100%;
+  height: 40em;
+  background: url(./src/prejectSrc/smile/2.png) center/cover no-repeat;
+}
+
+.img3 {
+  width: 100%;
+  height: 30em;
+  background: url(./src/prejectSrc/smile/3.png) center/contain no-repeat;
+}
+
+.img3 .img-description--out {
+  top: 0;
+}
+
+.img4 {
+  width: 100%;
+  height: 85em;
+  background: url(./src/prejectSrc/smile/4.png) center/cover no-repeat;
+}
+
+.img5 {
+  margin-top: 10em;
+  width: 100%;
+  height: 55em;
+  background: url(./src/prejectSrc/smile/5.png) center/cover no-repeat;
+}
+
+.img6 {
+  margin-top: 10em;
+  width: 100%;
+  height: 90em;
+  background: url(./src/prejectSrc/smile/6.png) center/cover no-repeat;
+}
+
+.img7 {
+  width: 100%;
+  height: 90em;
+  background: url(./src/prejectSrc/smile/7.png) center/cover no-repeat;
+}
+
+.img8 {
+  width: 100%;
+  height: 90em;
+  background: url(./src/prejectSrc/smile/8.png) center/cover no-repeat;
+}
+
+.img-container {
+  width: 100%;
+  height: 50em;
+  display: flex;
+}
+
+.img9 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/9-1.png) center/cover no-repeat;
+}
+
+.img10 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/9-2.png) center/cover no-repeat;
+}
+
+.img11 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/10-1.png) center/cover no-repeat;
+}
+
+.img12 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/10-2.png) center/cover no-repeat;
+}
+
+.img11 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/10-1.jpg) center/cover no-repeat;
+}
+
+.img12 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/10-2.png) center/cover no-repeat;
+}
+
+.img13 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/11-1.png) center/cover no-repeat;
+}
+
+.img14 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/11-2.png) center/cover no-repeat;
+}
+
+.img15 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/12-1.png) center/cover no-repeat;
+}
+
+.img16 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/12-2.jpg) center/cover no-repeat;
+}
+
+.img17 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/13-1.png) center/cover no-repeat;
+}
+
+.img18 {
+  width: 100%;
+  height: 100%;
+  background: url(./src/prejectSrc/smile/13-2.jpg) center/cover no-repeat;
+}
